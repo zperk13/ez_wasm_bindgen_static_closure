@@ -49,13 +49,9 @@ pub fn static_closures(input: TokenStream) -> TokenStream {
                 _ => panic!("Expected types in closure input, got {}", stringify!(p)),
             })
             .collect();
-        let tokens = quote! {
-            thread_local! {
+        quote! {
                 static #ident: wasm_bindgen::prelude::Closure<dyn FnMut(#(#closure_types),*)> = wasm_bindgen::prelude::Closure::wrap(Box::new(#closure) as Box<dyn FnMut(#(#closure_types),*)>);
-            }
-        };
-        tokens
+        }
     });
-
-    TokenStream::from(quote!(#(#all_tokens)*))
+    TokenStream::from(quote!(thread_local! {#(#all_tokens)*}))
 }
