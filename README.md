@@ -2,7 +2,7 @@
 
 Without this macro:
 
-```
+```rust
 thread_local! {
     static CLOSURE_NAME: Closure<dyn FnMut()> = Closure::wrap(Box::new(|| {
         some_code();
@@ -18,7 +18,7 @@ thread_local! {
 
 With this macro:
 
-```
+```rust
 static_closures! {
     CLOSURE_NAME = || {
         some_code;
