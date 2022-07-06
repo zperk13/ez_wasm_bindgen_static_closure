@@ -21,7 +21,7 @@ With this macro:
 ```rust
 static_closures! {
     CLOSURE_NAME = || {
-        some_code;
+        some_code();
     };
 
     CLOSURE_NAME_2 = |event: KeyboardEvent| {
