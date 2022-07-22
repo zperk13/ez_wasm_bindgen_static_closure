@@ -1,8 +1,10 @@
 [package]
 name = "ez_wasm_bindgen_static_closure"
-version = "0.1.0"
 authors = ["zperk13"]
 edition = "2021"
+description = "A macro to make thread_local static wasm-bindgen closures easier to make"
+repository = "https://github.com/zperk13/ez_wasm_bindgen_static_closure"
+license = "MIT OR Apache-2.0"
 
 [lib]
 proc_macro=true
