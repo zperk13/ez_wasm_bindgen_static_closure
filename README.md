@@ -1,4 +1,4 @@
-# A macro to make thead_local static wasm-bindgen closures easier to make.
+# A macro to make thread_local static wasm-bindgen closures easier to make.
 
 Without this macro:
 
